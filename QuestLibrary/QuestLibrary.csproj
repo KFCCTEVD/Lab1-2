@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67D85660-C059-4428-8947-4FF08CF83409}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuestLibrary</RootNamespace>
+    <AssemblyName>QuestLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbsrtractClasses\IDecoyItem.cs" />
+    <Compile Include="AbsrtractClasses\IQuest.cs" />
+    <Compile Include="AbsrtractClasses\IQuestFactory.cs" />
+    <Compile Include="AbsrtractClasses\IQuestItem.cs" />
+    <Compile Include="AbsrtractClasses\IQuestRoom.cs" />
+    <Compile Include="DecoyItems\CastleBroach.cs" />
+    <Compile Include="DecoyItems\CastleBroom.cs" />
+    <Compile Include="DecoyItems\CastleLance.cs" />
+    <Compile Include="DecoyItems\ForestApple.cs" />
+    <Compile Include="DecoyItems\ForestLeaves.cs" />
+    <Compile Include="DecoyItems\ForestSeed.cs" />
+    <Compile Include="DecoyItems\VillageAxe.cs" />
+    <Compile Include="DecoyItems\VillageBoots.cs" />
+    <Compile Include="DecoyItems\VillageHammer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestFactories\CastleQuestFactory.cs" />
+    <Compile Include="QuestFactories\ForestQuestFactory.cs" />
+    <Compile Include="QuestFactories\VillageQuestFactory.cs" />
+    <Compile Include="QuestItems\AncientAmmulet.cs" />
+    <Compile Include="QuestItems\LostBook.cs" />
+    <Compile Include="QuestItems\RoyalCrown.cs" />
+    <Compile Include="QuestRooms\CastleQuestRoom.cs" />
+    <Compile Include="QuestRooms\ForestQuestRoom.cs" />
+    <Compile Include="QuestRooms\VillageQuestRoom.cs" />
+    <Compile Include="Quests\CastleQuest.cs" />
+    <Compile Include="Quests\ForestQuest.cs" />
+    <Compile Include="Quests\VillageQuest.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="resources\images\decoy_items\CastleBroach.png" />
+    <Content Include="resources\images\decoy_items\CastleBroom.png" />
+    <Content Include="resources\images\decoy_items\CastleLance.png" />
+    <Content Include="resources\images\decoy_items\ForestApple.png" />
+    <Content Include="resources\images\decoy_items\ForestLeaves.png" />
+    <Content Include="resources\images\decoy_items\ForestSeed.png" />
+    <Content Include="resources\images\decoy_items\VillageAxe.png" />
+    <Content Include="resources\images\decoy_items\VillageBoots.png" />
+    <Content Include="resources\images\decoy_items\VillageHammer.png" />
+    <Content Include="resources\images\quest_items\AncientAmmulet.png" />
+    <Content Include="resources\images\quest_items\LostBook.png" />
+    <Content Include="resources\images\quest_items\RoyalCrown.png" />
+    <Content Include="resources\images\rooms\CastleRoom.png" />
+    <Content Include="resources\images\rooms\ForestRoom.png" />
+    <Content Include="resources\images\rooms\VillageRoom.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
